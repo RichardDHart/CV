@@ -1,0 +1,356 @@
+.cvheading{
+  text-align: left;
+  /* font-size: x-large; */
+  font-weight: bold;
+  color: darkblue;
+}
+
+th {
+    background-color: rgb(88, 88, 153);
+    color: white;
+    text-align: center;
+    }
+
+td {
+    /* background-color: #EEEEEE; */
+    text-align: center;
+}
+
+.InvoiceForm{
+    border-radius: 4px;
+    border: 1px solid #83cad4;
+    padding: 6px;
+    width: 95px;
+
+}
+
+#form id_hrs{
+    width: 75px
+}
+
+a {
+    /* outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0; */
+    color:black;
+    text-decoration:none;
+  }
+
+a:link {
+color: black;
+border-bottom: none;
+}
+
+/* a:visited {
+color: inherit;
+} */
+
+/* a:focus {
+border-bottom: 1px solid;
+background: #57b1bd;
+} */
+
+a:hover {
+/* border-bottom: 1px solid; */
+background: #808192;
+color: white
+}
+
+.blue_form {
+    width: 70vmin;
+    margin:5px auto;
+    padding: 10px;
+    background-color: rgb(216, 233, 238);
+    text-align: center;
+}
+
+.red_form {
+    width: 30vmin;
+    margin:30px auto;
+    padding: 15px;
+    background-color: rgb(201, 67, 67);
+}
+
+#totals_table_all_entries,
+#specific_invoice_table,
+#specific_month_table,
+#paid {
+    /* text-align: right; */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#totals_table_medium,
+#summary_table,
+#job_by_date_table {
+    /* text-align: right; */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#summary_table {
+    max-width: 65%;
+}
+
+#totals_table_small,
+#monthly_totals,
+#barchart {
+    /* text-align: right; */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* If the screen size is 600px wide or less, set the bar chart size */
+@media screen and (max-width: 600px) {
+  #barchart {
+    width: 75vw;
+  }
+}
+
+@media print{
+  #totals_table_small,
+  #monthly_totals,
+  #barchart{
+    width: 75%;
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+.flex-container {
+display: flex; /* or inline-flex */
+flex-direction: column;
+/* width: 100% */
+}
+
+.tabletop_blue {
+    background-color: blue;
+    color: white;
+}
+
+.tabletop_green {
+    background-color: rgb(23, 145, 12);
+    color: white;
+}
+
+.tabletop_red {
+    background-color: rgb(145, 12, 19);
+    color: white;
+}
+
+.tabletop_grey {
+    background-color: #00203FFF;
+    /* color: rgb(63, 90, 48); */
+}
+
+.tabletop_sky {
+    background-color: rgb(105, 226, 230);
+    color: rgb(6, 3, 146);
+}
+
+.tabletop_lime {
+    background-color: #D6ED17FF;
+    color: #606060FF;
+}
+
+.tabletop_blue >tr >th,
+.tabletop_green >tr >th,
+.tabletop_red >tr >th,
+.tabletop_grey >tr >th,
+.tabletop_sky >tr >th,
+.tabletop_lime >tr >th,
+.thead-dark >tr >th{
+
+    vertical-align: text-top;
+}
+
+.invoice_presentation {
+    max-width: 80 vmin;
+    min-width: 450px;
+    margin: auto;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+h5 {
+    text-align: center;
+}
+
+@media print{
+    .noprint{
+        display:none;
+    }
+ }
+
+ .rh_logo{
+    text-align: left;
+    font-size: x-large;
+    font-weight: bold;
+    color: darkblue;
+ }
+
+ .message{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(221, 37, 98);
+ }
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    table {
+      font-size: 16px;
+    }
+  }
+
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 11px;
+    }
+  }
+
+  .admin {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+.address_button{
+    padding: 0;
+    border: none;
+    background: none;
+    margin-top: 5px;
+}
+
+.image{
+    width: 25px;
+    height: 25px;
+}
+
+  .portada{
+    width: 80vmin;
+    /* min-height: 200px; */
+    margin: 20px auto 0 auto;
+    font-size: 26px;
+    border: rgb(86, 148, 117);
+    border-style:solid;
+    padding: 2vmin;
+    text-align: center;
+    /* background-color: lemonchiffon; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /* .form-check{
+    float: right;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(145, 12, 19);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #a6b6d4;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #a6b6d4;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 17px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .active {
+    background-color: #f8f9fa;
+    margin-right: 5px;
+    /* width: 36px;
+    height: 30px; */
+  }
+  
+  #printer {
+    width: 20;
+    height:20;
+  }
+
+  #home {
+    width: 28;
+    height:22;
+  }
+
+  .dropdown {
+    color: black;
+  }
+
+  /* .navbar .navbar-expand-lg{
+    background-image: url("static/invoice/madrid.jpg");
+    background-color: "#f8f9fa"
+  } */
+  
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+}

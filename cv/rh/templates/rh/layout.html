@@ -1,0 +1,83 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'rh/styles.css' %}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+    <link href="/static/invoice/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/static/invoice/styles.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <style> 
+        @media print { 
+            .noprint { 
+                visibility: hidden; 
+            } 
+        }
+    </style>
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-sm noprint nav-fill w-100" style="background-color: #f8f9fa;  position: fixed;">
+        <div class="container-fluid">
+            <div>
+                <a title = "Home page" class="active" href="/"><img id = "home" src="static\rh\casa.png" alt="Home"/></a>
+                <button title = "Print preview" onclick="window.print()" class = "btn btn-light btn-sm"><img id = "printer" src="static\rh\index.png" alt="Print"/></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a style = "color: darkblue;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          English
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{% url 'index' %}">Synopsis</a>
+                          <a class="dropdown-item" href="{% url 'employment' %}">Employment Record</a>
+                          <a class="dropdown-item" href="{% url 'experience' %}">Experience</a>
+                          <a class="dropdown-item" href="{% url 'projects' %}">Projects</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a style = "color: darkblue;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Español
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{% url 'indice' %}">Resumen</a>
+                          <a class="dropdown-item" href="{% url 'empleo' %}">Empleo</a>
+                          <a class="dropdown-item" href="{% url 'experiencia' %}">Experiencia</a>
+                          <a class="dropdown-item" href="{% url 'obras' %}">Obras</a>
+                        </div>
+                    </li>
+                    
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main style="padding-top:50px">
+        {% block body %}{% endblock %}
+    </main>
+</body>
+
+</html>
+<!-- style="background-color: rgb(216, 233, 238);" -->
