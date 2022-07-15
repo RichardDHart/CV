@@ -1,8 +1,61 @@
-.cvheading{
+.table > tbody > tr > td {
+  text-align: left;
+  width: fit-content;
+  }
+
+.table {
+  margin-left: 5vmin;
+}
+
+@media only screen{
+  .noprint
+  .noScreen{display:none;}
+}
+@media screen {
+  .noScreen {
+    display: none
+  }
+}
+
+h3 {
+  padding-left: 36px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+} 
+
+.cvheading {
   text-align: left;
   /* font-size: x-large; */
   font-weight: bold;
   color: darkblue;
+}
+
+/* @media screen and (max-width: 600px) {
+  .cvheading {
+    margin: 2vmin;
+}
+  } */
+
+.intro {
+  columns: 300px 3;
 }
 
 th {
@@ -186,12 +239,14 @@ flex-direction: column;
 }
 
 h5 {
-    text-align: center;
+    text-align: left;
+    margin: 5vmin;
 }
 
 @media print{
     .noprint{
         display:none;
+        .noScreen{}
     }
  }
 
@@ -218,10 +273,12 @@ h5 {
 
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 600px) {
-    table {
-      font-size: 11px;
-    }
+    .table {
+      font-size: 12px;
+      width: 90vw;
+      margin-left: 1vmin;
   }
+    }
 
   .admin {
     margin-left: 10px;
